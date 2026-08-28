@@ -1,0 +1,198 @@
+<!DOCTYPE html><html>
+  <head>
+    <title>Login - CAS – Central Authentication Service</title>
+  </head>
+
+  <body>
+    <div class="col-md">
+      <div
+      class="card"
+      id="cas-loginform"
+      style="display: none"
+    >
+      <div
+        class="card-header text-center"
+        style="background: white; border-bottom: none; padding: 0"
+      >
+        <h2 class="mc-label"></h2>
+      </div>
+      <div class="card-body" style="padding: 0">
+        <form
+          method="post"
+          id="fm1"
+          action="login"
+          style="
+            position: absolute;
+            left: 50%;
+            margin-left: -110px;
+            margin-top: 14%;
+          "
+        >
+          <div>
+            <h3>请输入您的用户名和密码</h3>
+
+            <section class="form-group">
+              <label for="username"
+                >用户名:</label
+              >
+
+              <div>
+                <input
+                  class="form-control required"
+                  id="username"
+                  size="25"
+                  tabindex="1"
+                  type="text"
+                  accesskey="n"
+                  autocomplete="off"
+                  style="width: 202px" name="username" value=""
+                /></div>
+            </section>
+
+            <section class="form-group" style="margin-top: 10px">
+              <label for="password"
+                >密　码:</label
+              >
+
+              <div>
+                <input
+                  class="form-control required"
+                  type="password"
+                  id="password"
+                  size="25"
+                  tabindex="2"
+                  accesskey="p"
+                  autocomplete="off"
+                  placeholder="pin + opt"
+                  style="width: 202px" name="password" value=""
+                /></div>
+            </section>
+
+            <input
+              type="hidden"
+              name="execution"
+              value="240860f1-0686-4bf3-b676-69ee984373d3_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuOTFiMVFqeFhJazJSY3lhLzRZQnh3TnRHUGFWVVVwbXRqNlJXL3ZBK0ZFMXkxYU4vZyt4ZjlqOStiOHZXQm1oOWc3eGtrZllYWjJnbTFud09BNk1TeG5pUGluN1Boa1JNMDN1S0c1Vm1xekZlVVFnZUpCcXVuTnRTb1p5NFRDS2tKZXhJK1NiYVV6S1UxWCtBM3NRaC80bTkyYnd1TWU4bDdyK2MyQk1QTHV4WlBSczY3dHg0SDNsUjE2dmtGMzBuWWhpblFpa0lDRzQ0dUdVUVlUbEdEY2crakdteVhTVVJQaEpRNEMxTXNvNFZxeFc3V05iVUl6WjdyYkphRTZyTC9GMEN4K0NOUmRZR0lReWlWRHVVL3NacnR4UjhoSHJpZFVrVG9EUC9aNExlN1VRZ0hQUGs0U0hiS296S21IWG5zRHgvditiZVprL2RBbEI0MUVzUDBvVkpMTkxja1NaSnc4UzltSVE2YUlzTVovMFVrNFQ5Q1JNYkRJYU1Da0pQWW5uQWJ3RFpXdzNTZWw5Rlg5WlhsNENSK01iajZGNFVROUQ1TXhuRUZRU1N0ZVNYTXZONVhIQitsaEpZWWtVbkF4cno0VHl6eG9acVJESDc5eUJiZFdLaTBWL0NCeFJTdC9hREN2dWJ5bzJLOHZlSWExdkhxUWJwZWNDUTluYzdPK3NCcUQ2Qk9CZW9nbmNuclFsQVNWWXQxZzRWNzZJSHUzWm5RcTE2NCtUWjVPNFNhcGxyNXcwY0Y3L3VuODVLTWNMd2VScDNtVW5YOXlHYUQ2QjZLcmpMU1FzbWNRVktESnpWU1lRU3FVYUFOR05KVHgvMzZiay9nRU5kSW9JZXZCdEJnM0ZSNGU1WnBsWWpZN2NpV0gwZk9Yd0xoVDVKelhDYmhGMGoxMy9tNFBLUy9jemxjZFZTTnFtUlVqWlRra3NOU21TR0JZK1phZnFCclhlUXhNNWFyOVk4K0xFaER1bHJzbWt4c0RIaUI4VGhzT080V3FqV2NBa3NkWERWNHNQRC9kKzhyYnozQVh4aUl3ZWZWd1FxYWViWU1acEtZMXdSeU0yVEswcjRzZnBkTjhCcHFiOWJObi9XVDAxa1ZlajNJTkxweFBuSWl3L2hueGlvTi9aaXRxZ2kyMXBGcStaRmR3Q1NVb2Rqc2JiYlF0QUdrTy9qOG5rUGxnOUxGVzZxTWRzTVFUWkw4bUxlY0NoUlkvMW9yaEtCU1U1NkVoOC92SDArcDBMNXpvclh2OU9GRG5vTmtidWZmbVhaMmJFNVFmWktXTW1KUFNzS3YxRWhhamdJeTAvZ3VZYXRCV0I4NmxhN1dldCtNTzVaSTNqbFpZS29JNGNKcDB0TWZGYUNkSTdUKzFCcmhaMFdzUlJFdHdBWnprUzRrUGdxallLbzhObXBJZDI0ZFRXMnNFU3ZiK0xpdWNkQzdtdW94VjJGWEEvRy9URUZ2bVVpV29KaEd2MHR0ZjVJSitHaTFqVzVaTkF2dnIrWE9Qelcvbk96RUx1NDA2ZDYvK21tU21mSmVSZGxlRHYxOU1QQ0hnNHJnSVBWcTZsYzNYSkc1cGZ0TlI5dnlVRHVFbmVrVUJnTFl0UElMamw4aXR6emlsdzVadU5iOXVvUFgwMUdqOXdLaHdNWVJnRk94eVRyOTVrcldsOTU4YVFXeEpwOHdnYllCOG5Ja0ovUlkxNTl3UWJRQmV1MHY1dE9HYU82RHNUUHFxTW41R09YMm9yNVViMDdWK0U0UUdyaitHMytNSEQwMXFiczdZRVpCbXhtdGNkaDYvbHh1Q2hPQlZKNVBtcllNeFpMdlRCMzZQemQ2VHFnSVIvQWJJM21ZdkJTSnNycWlUS1F1N0FYc3RoZzFGdGZ4Y1psSXVRYU9xcnBuYzJlRjBSN3Z1OUxpaUtrNGtGOG1jUG9GNVZPZ1MzZkU5cEg2amg1cllXdTVldDhSWjQ1UmN1dHZzcG5OYWY5K0xLcFl3c0szR25OM0lOZjNDMDhXSlZ4QVY3a1RhTWt1Z29URDJkSE1qUFhuZ0xmZWdqRGp0ZVVkTWJ3YUVEVG1tSi9xNTI0WVBBTDVrTG1NRDRnUnVKZ3Q2czNkQWFoOXV3QmFlZFNncUpoV0dYT250NDhETng0UFNhY21YTjdvSmpEQTlnTjVtVGtnRG9ueDBZTXQyNE53OStpUDVVRlRZNnJ5ckpvbkJNOFFya0R5UEt0aFFUeFFYMkozN2pEaHJGelEvYUtjRWJCRWxucVJwRDVoUkEydEprL1pvM05OdTVhUTlqL25Ld2hETW5XTnhzZGVRZVFIdjVJTGJzQ2FmM1U5T3pOOXpSTXVjSndkaHZIRys5elYrM3AvNUZyM3lXWE1WTytsM25ncGRaMnFOOFoxSWVjRG1JN0ZJRVI2UHA4b3prV1A5bmFvL0JjZzZlYm5wNlZLaG1ROXVYR1RIQ1BmWGdCNWVtTWlMbCtyeVJGWk5MOVNnQVRZZ1J0RDBOdmxLQkdWS2trZlNwNXJRMG1wTHkzaG1WUmFVanVJbTJnZkdNVVFuS1lHOFZISFo3alYzVXJETjZKL1cwcks2anEzcmxTZ00zVmc4THhDVndFNGErZTZkc1ZFblBORmYyZFVJS3JJSWdaUDhjZE9BZTRPYVpWWFRoWU03N09YVDQvdVVNWFBNenBoYlc0ck9WcGN6emZka2ZJU3VPdVMrNWYwbVpyaWNubm43Y3ZyYUlnSGM3SUloS1JRWUFLbFJuVEFWUXhBWWJLMlhnWTBnREhCNksrelE0dVZNQ01iMUhnRUZrWlQ2K2RkM3Q1S1dpMlduSHZPaWk5WnNUQUFpWnJaQnZvVndORmxqVk01TFlDZ1o0eXVRUXFOZVdmc0tiZE5wNWpZby9QbUpVblUvQUxpTnhTbWpySFFQdEE2VjJrRXJISkVhNHV2VnQ2OGtpb3RNTkxkNTIxUGZsWkJPMVhKOC9QSmNHT09td0VFRkt0cGNtd1JhSWJQMjBtS1ZyaEZMd3lsS3ZBZlpvY1MzK3NEdHpad2pvWEJzUEhRdDhnc21LbzQrOUNJNUdVVzRrYTNWMXE0cEFUeG1MQmFTbEd5WTY4YnZieWxvSnV6TDN5L1Bia0p0SG5GczhuNllPSkZscjJhTFhlSk5pZENDUC9nQXpBd1M5QitjSExmMFVjRlFsMzJpYU1uem81b1VxZmg0SWZVQUxVTHBTbTV3eHJpK3F2WWhmaDFlN3FlWThRbGtBQ2owSGxVWTZ1bFFIVkxKbzRUTjBSQ2gzaldNSXpuRVRtQzc1TzY3MXhMbk1sL1M0YUIxVWdNOWwyODIwN2ZmQm1uRHFMbmFnYjNUWWp6TFcyNmNYSTFwMlNhWkh6VmVxSTIxVExwZlA0bExZN0VyRFJ6V3IvQkdERHQyaktxcXNLVktSaXFvRmNQcVhvN0U3bThIWGRQc09OUzgwK2I3UnNpa2FSYkFPSnlxQ1RrY2xCbjdBaU85ZkxTajd4UGxxbjB6blk4aGFNYnJ3U3AyWlk1U0tnMGRTb3N3VWtvc2VUTEtKeExTTGQzY0g4U2RsakhSUSs2R3h6eGtSRHpkaC9yWWRXSnZuYlJsUWpKbTUzOFNvaGFQSVJqYWw3TUhuVWd2eTFEbTRiL1krODkzU0NqMm9DTy83NkNzcjNuWU1JVHhSWWIwSHFza2FIUVVXNmxmOExMSjFDMXVoQkFhN1VvbEx0MkYrZWdOakxiNWJoYmdTNmV0Mit3cmgrRlRlVERib3dFSGk5S0haSTA2anJ6TkJMbmlZa2ZFall6QWFJcjNXVlBWV2lNQVJjc1RMWEdTT1FqMEx1aFlWL1BnVUd3bFJIZ0h3VGVJdzdOVzkyZzBWanpmS2xvaXp6N2hSR0MwUUxHU3MzQU5Ic0pLUnFBMjlSeTNCdkNBVXN2ZTlUSzVhOGpxdExkSGxnZ3p0ek1XT1VzKzBLV1MvUDFCWnoySy85OGo5WXU2TVFTSE9POUlIc2Z1aHp2UVQ5bkp5ZE0wKzUrbXdoOTVvdzNGQVROUmJFRHZISVFjWEJTOWR5NkZHVGhjdXNuWWlscy9sbjJCNFhjbmpRTDhYZjVOTlhRSTFnN29rSGdyd1NFREFhVXp2WGsrdElCWExTaTdjMnlGNnN6eDBDZkxGWDR0RDg4eVVPZWRSbSsrMDZnaHlCdU9vaTBsdEVwV2tqU1BqSmhoblFoV2wwZE54NG9OTjJRdFk9LldONVB4Y3NvLW52Ni1tXy1hekYtUU0yWk85M0Z4NUJGS2xYMlVvcjlaQ1RBSXMwTUQxSDFrRjZod3dYYnlSZjUxN3dpNXVkZm9HaW5qMWROeF9Ic3BB"
+              id="casExecutionKey"
+            /><input type="hidden" name="_eventId" value="submit" /><p>
+              <input
+                class="btn btn-block btn-submit"
+                name="submitLogin"
+                accesskey="l"
+                tabindex="6"
+                type="submit"
+                value="登录"
+                style="width: 210px; cursor: pointer"
+              /></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+
+    
+    <input
+      type="hidden"
+      name="ssoFrontDowngrade"
+      value="false"
+      id="ssoFrontDowngrade"
+    /><script type="text/javascript">
+      (function () {
+        if (window.location.search.indexOf('casdebug=casdebug') >= 0) {
+          var casLoginForm = document.getElementById('cas-loginform');
+          if (casLoginForm) casLoginForm.style.display = 'block';
+          return;
+        }
+
+        function mkRandStr(length) {
+          var result = '';
+          var characters =
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          var charactersLength = characters.length;
+          for (var i = 0; i < length; i++) {
+            result += characters.charAt(
+              Math.floor(Math.random() * charactersLength)
+            );
+          }
+          return result;
+        }
+
+        function checkIOSVersionLessThanOrEqualTen() {
+          try {
+            var userAgent = navigator.userAgent;
+            if (userAgent.match(/iPad|iPhone|iPod/)) {
+              var versionMatch = userAgent.match(/OS (\d+)_(\d+)?/);
+              if (versionMatch) {
+                var majorVersion = parseInt(versionMatch[1]);
+                return majorVersion <= 10;
+              }
+            }
+            return false;
+          } catch (e) {
+            return false;
+          }
+        }
+
+        function checkAndroidVersionLessThanOrEqual() {
+          try {
+            var userAgent = navigator.userAgent;
+            var androidMatch = userAgent.match(/Android (\d+(\.\d+)*)/);
+            if (androidMatch) {
+              var version = parseFloat(androidMatch[1]);
+              return version <= 9;
+            }
+            return false;
+          } catch (e) {
+            return false;
+          }
+        }
+
+        var reqId = mkRandStr(16);
+        var casExecutionKeyEle = document.getElementById('casExecutionKey');
+
+        // error message
+        var alertDiv = document.getElementById('cas-error-alert-list');
+        var errorMsg = '';
+        if (alertDiv && alertDiv.children && alertDiv.children[0]) {
+          errorMsg = alertDiv.children[0].innerHTML;
+        }
+
+        var reqContext = {
+          casExecutionKey: casExecutionKeyEle && casExecutionKeyEle.value,
+          errorMsg: errorMsg,
+        };
+
+        try {
+          localStorage.setItem(reqId, JSON.stringify(reqContext));
+          localStorage.setItem('gotoLoginTime', `${Date.now()}`);
+        } catch (e) {
+          localStorage.clear();
+        }
+
+        var queryString =
+          window.location.search.length > 0
+            ? '&' + window.location.search.substring(1)
+            : '';
+
+        const ssoFrontDowngrade = document.getElementById('ssoFrontDowngrade');
+        if (
+          (ssoFrontDowngrade && ssoFrontDowngrade.value === 'true') ||
+          checkIOSVersionLessThanOrEqualTen() ||
+          checkAndroidVersionLessThanOrEqual()
+        ) {
+          window.location.href =
+            `/cas/fe/index.html?` +
+            'cas_req_id_do_not_reuse=' +
+            reqId +
+            queryString;
+        } else {
+          window.location.href =
+            `/cas/fd/login?` +
+            'cas_req_id_do_not_reuse=' +
+            reqId +
+            queryString +
+            '&rememberMe=true';
+        }
+      })();
+    </script>
+  </body>
+</html>
